@@ -1,38 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Дизайн для вашего сайта и мобильного приложения">
 	<title>Нёрдс</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <div class="container">
-	<header class="main-header">
+	<header class="header">
 		<div class="wrapper">
-			<a href="#" class="logo">
-				<img src="img/logo.png" alt="Нердс">
+			<a href="index.html" class="header-logo">
+				<h1>Nёrds</h1>
 			</a>
-			<nav class="main-navigation">
-				<ul>
-					<li>
-						<a href="#">Студия</a>
-					</li>
-					<li>
-						<a href="#">Клиенты</a>
-					</li>
-					<li>
-						<a href="#">Магазин</a>
-					</li>
-					<li>
-						<a href="#">Контакты</a>
+			<div class="basket">
+				<a class="basket-link header-link" href="#">Корзина</a>
+			</div>
+			<nav class="navigation">
+				<ul class="navigation-list">
+					<li class="navigation-item">
+						<a href="#" class="header-link">Студия</a>
+					</li
+					><li class="navigation-item">
+						<a href="#" class="header-link">Клиенты</a>
+					</li
+					><li class="navigation-item">
+						<a href="catalog.html" class="header-link">Магазин</a>
+					</li
+					><li class="navigation-item">
+						<a href="#contacts" class="header-link">Контакты</a>
 					</li>
 				</ul>
 			</nav>
-			<div class="basket">
-				<a class="basket-link" href="#">Корзина</a>
-			</div>
 			<div class="slogan">
-				<h1 class="slogan-title">Магазин готовых шаблонов</h1>
+				<h2 class="slogan-title">Магазин готовых шаблонов</h2>
 			</div>
 		</div>
 	</header>
@@ -42,129 +44,187 @@
 			<div class="sidebar">
 				<form>
 				
-					<div class="filter-block price">
-						<div class="filter-block-title">Стоимость</div>
+					<div class="filter price clearfix">
+						<div class="filter-title">Стоимость</div>
 						<div class="price-slider">
 							<div class="price-slider-workspace">
-								<div class="price-slider-indicator">
+								<div class="price-slider-indicator"
+								     style="
+								        left: 27%;
+								        right: 34%;
+							        ">
 									<span class="price-slider-indicator-limit min"></span>
 									<span class="price-slider-indicator-limit max"></span>
 								</div>
 							</div>
 						</div>
 						<div class="price-limit min">
-							<label>
-								<span>От</span><input type="text" value="0">
+							<label class="price-limit-label">
+								<span>От</span><input type="number" class="price-limit-input" value="0">
 							</label>
 						</div>
 						<div class="price-limit max">
-							<label>
-								<span>До</span><input type="text" value="15000">
+							<label class="price-limit-label">
+								<span>До</span><input type="number" class="price-limit-input" value="15000">
 							</label>
 						</div>
 					</div>
 					
-					<div class="filter-block grid">
-						<div class="filter-block-title">Сетка:</div>
-						<ul>
-							<li>
-								<label>
+					<div class="filter grid">
+						<div class="filter-title">Сетка:</div>
+						<ul class="filter-list">
+							<li class="filter-item">
+								<label class="filter-item-label">
 									<input type="radio" name="gridtype" checked><span>Адаптивная</span>
 								</label>
 							</li>
-							<li>
-								<label>
-									<input type="radio" name="gridtype"><span>Фиксированная</span>
+							<li class="filter-item">
+								<label class="filter-item-label">
+									<input type="radio" name="gridtype" disabled><span>Фиксированная</span>
 								</label>
 							</li>
-							<li>
-								<label>
+							<li class="filter-item">
+								<label class="filter-item-label">
 									<input type="radio" name="gridtype"><span>Резиновая</span>
 								</label>
 							</li>
 						</ul>
 					</div>
 					
-					<div class="filter-block speciality">
-						<div class="filter-block-title">Особенности:</div>
-						<ul>
-							<li>
-								<label>
+					<div class="filter speciality">
+						<div class="filter-title">Особенности:</div>
+						<ul class="filter-list">
+							<li class="filter-item">
+								<label class="filter-item-label">
 									<input type="checkbox" checked><span>Слайдер</span>
 								</label>
 							</li>
-							<li>
-								<label>
+							<li class="filter-item">
+								<label class="filter-item-label">
 									<input type="checkbox"><span>Блок преимуществ</span>
 								</label>
 							</li>
-							<li>
-								<label>
-									<input type="checkbox" checked><span>Новости</span>
+							<li class="filter-item">
+								<label class="filter-item-label">
+									<input type="checkbox" checked disabled><span>Новости</span>
 								</label>
 							</li>
-							<li>
-								<label>
-									<input type="checkbox"><span>Галерея</span>
+							<li class="filter-item">
+								<label class="filter-item-label">
+									<input type="checkbox" disabled><span>Галерея</span>
 								</label>
 							</li>
-							<li>
-								<label>
+							<li class="filter-item">
+								<label class="filter-item-label">
 									<input type="checkbox"><span>Корзина</span>
 								</label>
 							</li>
 						</ul>
 					</div>
 					
-					<button class="button">Показать</button>
+					<button class="filter-button button gray">Показать</button>
 				</form>
 			</div>
 			
 			<main class="main">
 				
-				<div class="filter-block sorting">
-					<div class="filter-block-title">Сортировать</div>
-					<ul>
-						<li>
+				<div class="sorting clearfix">
+					<div class="sorting-title">Сортировать</div>
+					<span class="sorting-order">
+						<span class="sorting-order-type desc selected"></span>
+						<span class="sorting-order-type asc"></span>
+					</span>
+					<ul class="sorting-list">
+						<li class="sorting-item selected">
 							<span>По цене</span>
-						</li>
-						<li>
+						</li
+						><li class="sorting-item">
 							<span>По типу</span>
-						</li>
-						<li>
+						</li
+						><li class="sorting-item">
 							<span>По названию</span>
 						</li>
 					</ul>
-					<span class="sotring-order">
-						<span class="sorting-order-type desc"></span>
-						<span class="sorting-order-type asc"></span>
-					</span>
 				</div>
 				
 				<div class="catalog">
-					<ul>
-						<li><img src="img/catalog-sedona.jpg" alt=""></li>
-						<li><img src="img/catalog-pink.jpg" alt=""></li>
-						<li><img src="img/catalog-borodinksi.jpg" alt=""></li>
-						<li><img src="img/catalog-mishka.jpg" alt=""></li>
-						<li><img src="img/catalog-aplus.jpg" alt=""></li>
-						<li><img src="img/catalog-kvast.jpg" alt=""></li>
+					<ul class="catalog-list">
+						<li class="catalog-item">
+							<a href="#" class="catalog-item-link">
+								<img src="img/catalog-sedona.jpg" width="358" height="574" alt="">
+								<div class="catalog-item-content">
+									<div class="catalog-item-name">Sedona</div>
+									<div class="catalog-item-description">Информационный сайт для туристов</div>
+									<span class="button red catalog-item-button">9 900 Руб.</span>
+								</div>
+							</a>
+						</li
+						><li class="catalog-item">
+							<a href="#" class="catalog-item-link">
+								<img src="img/catalog-pink.jpg" width="358" height="574" alt="">
+								<div class="catalog-item-content">
+									<div class="catalog-item-name">Pink App</div>
+									<div class="catalog-item-description">Продуктовый лендинг приложения для iOS и Android</div>
+									<span class="button red catalog-item-button">9 900 Руб.</span>
+								</div>
+							</a>
+						</li
+						><li class="catalog-item">
+							<a href="#" class="catalog-item-link">
+								<img src="img/catalog-borodinski.jpg" width="358" height="574" alt="">
+								<div class="catalog-item-content">
+									<div class="catalog-item-name">Barbershop</div>
+									<div class="catalog-item-description">Сайт салоны красоты. Для мужчин, да.</div>
+									<span class="button red catalog-item-button">9 900 Руб.</span>
+								</div>
+							</a>
+						</li
+						><li class="catalog-item">
+							<a href="#" class="catalog-item-link">
+								<img src="img/catalog-mishka.jpg" width="358" height="574" alt="">
+								<div class="catalog-item-content">
+									<div class="catalog-item-name">Mishka</div>
+									<div class="catalog-item-description">Интернет-магазин вязаных игрушек</div>
+									<span class="button red catalog-item-button">9 900 Руб.</span>
+								</div>
+							</a>
+						</li
+						><li class="catalog-item">
+							<a href="#" class="catalog-item-link">
+								<img src="img/catalog-aplus.jpg" width="358" height="574" alt="">
+								<div class="catalog-item-content">
+									<div class="catalog-item-name">A Plus</div>
+									<div class="catalog-item-description">Лендинг курсов повышения квалификации</div>
+									<span class="button red catalog-item-button">9 900 Руб.</span>
+								</div>
+							</a>
+						</li
+						><li class="catalog-item">
+							<a href="#" class="catalog-item-link">
+								<img src="img/catalog-kvast.jpg" width="358" height="574" alt="">
+								<div class="catalog-item-content">
+									<div class="catalog-item-name">Кваст</div>
+									<div class="catalog-item-description">Промо-сайт производителя крафтового кваса</div>
+									<span class="button red catalog-item-button">9 900 Руб.</span>
+								</div>
+							</a>
+						</li>
 					</ul>
 				</div>
 				
 				<div class="pagination">
-					<ul>
-						<li class="current">
+					<ul class="pagination-list">
+						<li class="pagination-item current">
 							<span>1</span>
-						</li>
-						<li>
-							<span>2</span>
-						</li>
-						<li>
-							<span>3</span>
-						</li>
-						<li>
-							<span>Следующая</span>
+						</li
+						><li class="pagination-item">
+							<a href="#">2</a>
+						</li
+						><li class="pagination-item">
+							<a href="#">3</a>
+						</li
+						><li class="pagination-item next">
+							<a href="#">Следующая</a>
 						</li>
 					</ul>
 				</div>
@@ -172,32 +232,92 @@
 			</main>
 		</div>
 	</div>
-	
-	<div class="contacts">
-		<div class="wrapper">
-			<div class="contacts-main">
-				<h3 class="contacts-main-title">Nёrds design studio</h3>
-				<p>191186, Санкт-Петербург<br>
-				ул.Б.Конюшенная, д.19/8</p>
-				<p>тел. +7(812)275-75-75</p>
-				<a class="button" href="#">Напишите нам</a>
+
+	<div class="contacts" id="contacts">
+
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<span class="modal-close" onclick="document.querySelector('#modal').style.display = 'none'"></span>
+				<h3 class="modal-title">Напишите нам</h3>
+				<div class="feedback">
+					<form>
+						<div class="feedback-row">
+							<div class="feedback-cell small">
+								<label class="feedback-label">
+									<span class="feedback-cell-name">Ваше имя</span>
+									<span class="feedback-cell-value">
+										<input type="text" class="feedback-cell-input" placeholder="Представьтесь, пожалуйста">
+									</span>
+								</label>
+							</div>
+							<div class="feedback-cell small">
+								<label class="feedback-label">
+									<span class="feedback-cell-name">Ваш e-mail</span>
+									<span class="feedback-cell-value">
+										<input type="email" class="feedback-cell-input" placeholder="Для отправки ответа">
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="feedback-row">
+							<div class="feedback-cell">
+								<label class="feedback-label">
+									<span class="feedback-cell-name">Текст письма</span>
+									<span class="feedback-cell-value"><textarea class="feedback-cell-textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea></span>
+								</label>
+							</div>
+						</div>
+						<div class="feedback-row">
+							<div class="feedback-cell">
+								<input type="submit" value="Отправить" class="button red feedback-button">
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
+
+		<div class="contacts-map" id="map"></div>
+		<div class="contacts-main">
+			<h3 class="contacts-title">Nёrds design studio</h3>
+			<p>191186, Санкт-Петербург<br>
+				ул. Б. Конюшенная, д. 19/8</p>
+			<p>тел. +7 (812) 275-75-75</p>
+			<span class="button red contacts-button" onclick="document.querySelector('#modal').style.display = 'block'">Напишите нам</span>
+		</div>
 	</div>
-	
-	<footer class="main-footer">
+	<footer class="footer clearfix">
 		<div class="wrapper">
 			<div class="social">
-				<a class="vkontakte" href="#"></a>
-				<a class="facebook" href="#"></a>
-				<a class="instagram" href="#"></a>
+				<a class="vkontakte" href="#"></a
+				><a class="facebook" href="#"></a
+				><a class="instagram" href="#"></a>
 			</div>
 			<div class="proposal">
-				<p>Давайте дружить, это выгодно!</p>
-				<p>Скидка 10% для друзей из социальных сетей</p>
+				<div class="proposal-title">Давайте дружить, это выгодно!</div>
+				<div class="proposal-discount">Скидка 10% для друзей из социальных сетей</div>
 			</div>
 		</div>
 	</footer>
+
+	<script src="js/script.js"></script>
+	<script>
+		function initMap() {
+			var uluru = {lat: 59.9388, lng: 30.32303};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 18,
+				center: {lat: 59.9391, lng: 30.3213}
+			});
+			var marker = new google.maps.Marker({
+				position: uluru,
+				map: map,
+				icon: 'img/map-dot.png'
+			});
+		}
+	</script>
+	<script async defer
+	        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA985gO1cC9NH4mVkWpIjGpu_E5pz_5nS8&callback=initMap">
+	</script>
 </div>
 </body>
 </html>
